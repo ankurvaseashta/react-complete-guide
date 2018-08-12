@@ -14,7 +14,7 @@ class App extends Component {
   }
 
 deletePersonHandler = (personIndex) => {
-  //const persons = this.state.persons.slice();
+  //const persons = this.state.persons.slice(); Make copy of persons array
   const persons = [...this.state.persons];
   persons.splice(personIndex, 1);
   this.setState({persons: persons})
@@ -29,7 +29,7 @@ nameChangedHandler = (event, id) => {
     ...this.state.persons[personIndex]
   };
 
-  //const person Object.assign({}, this.state.persons[personIndex]);
+  // const person Object.assign({}, this.state.persons[personIndex]);
 
   person.name = event.target.value;
 
@@ -37,14 +37,6 @@ nameChangedHandler = (event, id) => {
   persons[personIndex] = person;
 
   this.setState( {persons: persons} );
-
-  this.setState({
-    persons: [
-     { name: 'Ankur', age: 53 },
-     { name: event.target.value, age: 50 },
-     { name: 'Buggy', age: 55 }
-    ]
-  } )
 }
 
 togglePersonsHandler = () => {
