@@ -31,6 +31,7 @@ nameChangedHandler = (event, id) => {
 
   // const person Object.assign({}, this.state.persons[personIndex]);
 
+
   person.name = event.target.value;
 
   const persons = [...this.state.persons];
@@ -45,9 +46,9 @@ togglePersonsHandler = () => {
 }
 
   render() {
-
-    const style ={
-      backgroudColor: 'white',
+    const style = {
+      backgroundColor: 'green',
+      color: 'white',
       font: 'inherit',
       border: '1x solid blue',
       padding: '8px',
@@ -69,12 +70,16 @@ togglePersonsHandler = () => {
             })}
           </div> 
         );
+
+        style.backgroundColor = 'red';
     }
+
+    let classes = ['red', 'bold'].join(' '); ///array of strings seperated by a empty space using join "red bold"
 
     return (
       <div className="App">
         <h1> Hi, I am a react app!! </h1>
-        <p> This is really working! </p>
+        <p className={classes}> This is really working! </p>
         <button
         style={style} 
         onClick={this.togglePersonsHandler}>Toggle Persons</button>
