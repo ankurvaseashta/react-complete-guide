@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './App.css';
-import Person from '../components/Persons/Person/Person';
+import Persons from '../components/Persons/Persons';
+import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
   state = {
@@ -26,11 +27,10 @@ nameChangedHandler = (event, id) => {
     return p.id === id;
   });
 
+  // const person Object.assign({}, this.state.persons[personIndex]);
   const person = {
     ...this.state.persons[personIndex]
   };
-
-  // const person Object.assign({}, this.state.persons[personIndex]);
 
 
   person.name = event.target.value;
@@ -47,49 +47,24 @@ togglePersonsHandler = () => {
 }
 
   render() {
-
     let persons = null;
-    let btnClass = '';
-
     if( this.state.showPersons ){
-      persons = (
-        <div>
-        {this.state.persons.map( (person, index) => { 
-          return <Person  
-              click={() => this.deletePersonHandler(index)}
-              name={person.name} 
-              age={person.age}
-              key={person.id} 
-              changed={(event) => this.nameChangedHandler(event, person.id)} />
-            } )}
-          </div> 
-        );
-
-        btnClass = classes.Red;
-    }
-
-    ///let classes = ['red', 'bold'].join(' '); ///array of strings seperated by a empty space using join "red bold"
-    const assignedClasses = [];
-    if(this.state.persons.length <= 2){
-      assignedClasses.push( classes.red ); // classes = ['red']
-    }
-    if (this.state.persons.length <=1){
-      assignedClasses.push( classes.bold ); // classes = ['red', 'bold']
+      persons = <Persons 
+            persons={this.state.persons}
+            clicked={this.deletePersonHandler}
+            changed={this.nameChangedHandler} />;
     }
 
     return (
-
       <div className={classes.App}>
-        <h1> Hi, I am a react app!! </h1>
-        <p className={assignedClasses.join(' ')}> This is really working! </p>
-        <button
-        className={btnClass}
-        onClick={this.togglePersonsHandler}>Toggle Persons</button>
+        <Cockpit 
+        showPersons={this.state.showPersons}
+        persons={this.state.persons}
+        clicked={this.togglePersonsHandler} />
         {persons}
       </div>
 
     );
-    ///*return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Hi, I am a react app!!!'));*/
   }
 }
 
