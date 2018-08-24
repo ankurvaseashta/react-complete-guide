@@ -1,3 +1,4 @@
+
 .red {
   color: red;
 }
@@ -21,7 +22,7 @@
 }
 
 .Cockpit button.Red {
-	background-color: lightgreen;
+	background-color: red;
 	color: black;
 }
 

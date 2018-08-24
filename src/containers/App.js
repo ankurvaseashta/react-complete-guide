@@ -47,7 +47,11 @@ togglePersonsHandler = () => {
 }
 
   render() {
+    
     let persons = null;
+    let btnClass = '';
+
+
     if( this.state.showPersons ){
       persons = <Persons 
             persons={this.state.persons}
