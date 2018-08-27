@@ -5,7 +5,10 @@ import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
-  state = {
+  constructor(props){
+    super(props);
+    console.log('[App.js] Inside Constructor', props);
+    this.state = {
     persons: [
      { id: 'abcd', name: 'Ankur', age: 33 },
      { id: 'abce', name: 'Helena', age: 30 },
@@ -14,7 +17,27 @@ class App extends Component {
     ],
     otherState: 'some other value',
     showPersons: false
+    };
   }
+
+  componentWillMount(){
+    console.log('[App.js] Inside componentWillMount()');
+  }
+
+  componentDidMount(){
+    console.log('[App.js] Inside componentDidMount()');
+  }
+
+  // state = {
+  //   persons: [
+  //    { id: 'abcd', name: 'Ankur', age: 33 },
+  //    { id: 'abce', name: 'Helena', age: 30 },
+  //    { id: 'abcf', name: 'Buddy', age: 4 },
+  //    { id: 'abcg', name: 'Valentina', age: 4 }
+  //   ],
+  //   otherState: 'some other value',
+  //   showPersons: false
+  // }
 
 deletePersonHandler = (personIndex) => {
   //const persons = this.state.persons.slice(); Make copy of persons array
@@ -48,7 +71,7 @@ togglePersonsHandler = () => {
 }
 
   render() {
-    
+    console.log('[App.js] Inside render()');
     let persons = null;
 
     if( this.state.showPersons ){
