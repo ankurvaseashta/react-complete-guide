@@ -98,7 +98,7 @@ togglePersonsHandler = () => {
 
     return (
       <div className={classes.App}>
-        <button onClick={() => {this.setState({showPersons: true})}}>show Persons</button>
+        <button onClick={() => {this.setState({showPersons: true})}}>Show Persons</button>
         <Cockpit
         appTitle={this.props.title} 
         showPersons={this.state.showPersons}
