@@ -9,16 +9,19 @@ import React, {Component} from 'react';
 // }
 
 const withClass = (WrappedComponet, className) => {
-	return class extends Component{
+	const WithClass =  class extends Component{
 		render () {
 			return (
 				<div className={className}>
-					<WrappedComponet {...this.props} />
+					<WrappedComponet ref={this.props.forwardedRef} {...this.props} />
 				</div>
 			)
 		}
 	}
 
+	return React.forwardRef((props, ref) => {
+		return <WithClass {...props} forwardedRef={ref} />
+	});
 }
 
 export default withClass;
