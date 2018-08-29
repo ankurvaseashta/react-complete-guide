@@ -128,7 +128,7 @@ togglePersonsHandler = () => {
 
     return (
     <Aux>
-        <button onClick={() => {this.setState({showPersons: true})}}>Show Persons</button>
+        <button style={{width: 100, height: 50, margin: 20, color: '#4286f4', backgroundColor: '#f4f0eb'}} onClick={() => {this.setState({showPersons: true})}}>Show Persons</button>
         <Cockpit
         appTitle={this.props.title} 
         showPersons={this.state.showPersons}

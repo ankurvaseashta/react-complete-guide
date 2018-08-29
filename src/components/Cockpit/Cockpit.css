@@ -29,3 +29,10 @@
 	background-color: salmon;
 	color: black;
 }
+
+.indent{
+    margin-left: 25px;
+    margin-right: 0px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
