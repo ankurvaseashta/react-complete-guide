@@ -4,7 +4,7 @@ import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 import Aux from '../hoc/Aux';
-import withClass from '../hoc/withClass';
+import withClass from '../hoc/WithClass';
 
 class App extends PureComponent {
   constructor(props){
