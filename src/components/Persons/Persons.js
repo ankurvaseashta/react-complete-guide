@@ -16,8 +16,13 @@ class Persons extends PureComponent {
   }
 
   componentDidMount(){
-    console.log('[Persons.js] Inside componentDidMount()');
-    this.lastPersonRef.current.focus();
+    console.log('[Persons.js] Inside componentDidMount()'); 
+
+    if(this.lastPersonRef.current !== null){
+      this.lastPersonRef.current.focus();
+    }
+    
+
   }//not called through DOM events
 
   componentWillReceiveProps(nextProps){
