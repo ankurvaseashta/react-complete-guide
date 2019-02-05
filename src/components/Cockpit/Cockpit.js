@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Cockpit.css';
-import Aux from '../../hoc/Aux';
+import Auxi from '../../hoc/Auxi';
 
 const cockpit = (props) => {
     ///let classes = ['red', 'bold'].join(' '); ///array of strings seperated by a empty space using join "red bold"
@@ -19,14 +19,14 @@ const cockpit = (props) => {
     }
 
 	return(
-        <Aux>
+        <Auxi>
             <h1> { props.appTitle } </h1>
             <p className={assignedClasses.join(' ')}> This is really working! </p>
             <button
                 className={btnClass}
                 onClick={props.clicked}>Toggle Persons</button>
             <button className={classes.indent} onClick={props.login}>Log in</button>
-        </Aux>
+        </Auxi>
 	);
 };
 

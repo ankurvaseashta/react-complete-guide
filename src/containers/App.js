@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
-import Aux from '../hoc/Aux';
+import Auxi from '../hoc/Auxi';
 import withClass from '../hoc/withClass';
 
 export const AuthContext = React.createContext(false);
@@ -127,7 +127,7 @@ togglePersonsHandler = () => {
     }
 
     return (
-    <Aux>
+    <Auxi>
         <button style={{width: 100, height: 50, margin: 20, color: '#4286f4', backgroundColor: '#f4f0eb'}} onClick={() => {this.setState({showPersons: true})}}>Show Persons</button>
         <Cockpit
         appTitle={this.props.title} 
@@ -138,7 +138,7 @@ togglePersonsHandler = () => {
         <AuthContext.Provider value={this.state.authenticated}> 
           {persons} 
         </AuthContext.Provider>
-    </Aux>
+    </Auxi>
     );
   }
 }
