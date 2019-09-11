@@ -11,7 +11,11 @@ const cockpit = (props) => {
  	if(props.showPersons){
 	  btnClass = [classes.Button, classes.Red].join(' ');
  	}
+    if(props.persons.length <= 3){
+      assignedClasses.push( classes.blue ); // classes = ['blue']
+    }
     if(props.persons.length <= 2){
+      assignedClasses.pop( classes.blue ); // classes = ['blue']
       assignedClasses.push( classes.red ); // classes = ['red']
     }
     if(props.persons.length <= 1){
@@ -21,7 +25,7 @@ const cockpit = (props) => {
 	return(
         <Auxi>
             <h1> { props.appTitle } </h1>
-            <p className={assignedClasses.join(' ')}> This is really working! </p>
+            <p className={assignedClasses.join(' ')}> People in list! </p>
             <button
                 className={btnClass}
                 onClick={props.clicked}>Toggle Persons</button>
