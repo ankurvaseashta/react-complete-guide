@@ -11,7 +11,11 @@ const cockpit = (props) => {
  	if(props.showPersons){
 	  btnClass = [classes.Button, classes.Red].join(' ');
  	}
+    if(props.persons.length <= 4){
+      assignedClasses.push( classes.green ); // classes = ['green']
+    }
     if(props.persons.length <= 3){
+      assignedClasses.pop( classes.green ); // classes = ['green']
       assignedClasses.push( classes.blue ); // classes = ['blue']
     }
     if(props.persons.length <= 2){
