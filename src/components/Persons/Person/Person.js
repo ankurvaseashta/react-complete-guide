@@ -33,7 +33,7 @@ class Person extends Component {
 		return (
 		<Auxi>
     <AuthContext.Consumer>
-      {auth => auth ? <p> <b>Authenticated!</b> </p> : <p> Not authenticated! </p>}
+      {auth => auth ? <p style={{color: 'red'}} > <b>Authenticated!</b> </p> : <p> Not authenticated! </p>}
     </AuthContext.Consumer>
       <p onClick={this.props.click}>I'm {this.props.name}, a {this.props.type} and {this.props.age} years old! </p>
       <p> {this.props.children} </p>
