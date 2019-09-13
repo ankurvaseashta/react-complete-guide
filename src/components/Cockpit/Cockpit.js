@@ -7,6 +7,7 @@ const cockpit = (props) => {
     ///let classes = ['red', 'bold'].join(' '); ///array of strings seperated by a empty space using join "red bold"
     const assignedClasses = [];
     let btnClass = classes.Button;
+    let btnLogin= classes.loginButton;
 
  	if(props.showPersons){
 	  btnClass = [classes.Button, classes.Red].join(' ');
@@ -33,7 +34,7 @@ const cockpit = (props) => {
             <button
                 className={btnClass}
                 onClick={props.clicked}>Toggle Persons</button>
-            <button className={classes.indent} onClick={props.login}>Log in</button>
+            <button className={btnLogin} onClick={props.login}>Log in</button>
         </Auxi>
 	);
 };
