@@ -16,7 +16,7 @@
 }
 
 .Button {
-	border: 1px solid blue; 
+	border: 1px solid black;
 	padding: 16px;
 	background-color: green;
 	font: inherit;
@@ -39,8 +39,5 @@
 }
 
 .indent{
-    margin-left: 25px;
-    margin-right: 0px;
-    margin-top: 7px;
-    margin-bottom: 7px;
+	margin: 0 0 0 25px;
 }
