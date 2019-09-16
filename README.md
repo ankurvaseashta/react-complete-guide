@@ -1,2 +1,2 @@
 # react-complete-guide
-Udemy course on React: The Complete Guide Including Redux
+#### Course on ReactJS: A Complete Guide Including Redux

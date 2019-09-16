@@ -16,11 +16,11 @@ const cockpit = (props) => {
       assignedClasses.push( classes.green ); // classes = ['green']
     }
     if(props.persons.length <= 3){
-      assignedClasses.pop( classes.green ); // classes = ['green']
+      assignedClasses.pop( );
       assignedClasses.push( classes.blue ); // classes = ['blue']
     }
     if(props.persons.length <= 2){
-      assignedClasses.pop( classes.blue ); // classes = ['blue']
+      assignedClasses.pop(  );
       assignedClasses.push( classes.red ); // classes = ['red']
     }
     if(props.persons.length <= 1){
