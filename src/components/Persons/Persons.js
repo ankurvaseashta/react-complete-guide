@@ -38,11 +38,11 @@ class Persons extends PureComponent {
     // }
 
     componentWillUpdate(nextProps, nextState) {
-        console.log('[UPDATE Persons.js] Inside componentWillUpdate', nextProps, nextState);
+        console.log('[UPDATE Persons.js] Inside componentWillUpdate()', nextProps, nextState);
     }
 
     componentDidUpdate() {
-        console.log('[UPDATE Persons.js] Inside componentDidUpdate');
+        console.log('[UPDATE Persons.js] Inside componentDidUpdate()');
     }
 
     render() {

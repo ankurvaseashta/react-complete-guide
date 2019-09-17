@@ -44,7 +44,8 @@ class Person extends Component {
                     ref={this.inputElement}
                     type="text"
                     onChange={this.props.changed}
-                    value={this.props.name}/>
+                    value={this.props.name}
+                    style={{textAlign: 'center', border: '1px black solid'}}/>
             </Auxi>
         )
         ///   return [
