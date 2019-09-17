@@ -7,12 +7,14 @@
 	text-align: center;
 	background: lightgrey;
 	cursor: cell;
+	display: flex;
+	flex-direction: column;
+	max-height: 200px;
 }
 
 
 @media (min-width: 500px){
 	.Person{
 		max-width: 700px;
-		flex-direction: column;
 	}
 }
