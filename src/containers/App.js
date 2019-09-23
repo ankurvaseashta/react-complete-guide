@@ -129,10 +129,16 @@ class App extends PureComponent {
         return (
             <Auxi>
                 <button
-                    style={{width: 100, height: 50, margin: 20, color: '#4286f4', backgroundColor: '#f4f0eb'}}
+                    style={{width: 100, height: 50, margin: 20, color: 'blue', backgroundColor: '#f4f0eb'}}
                     onClick={() => {
                         this.setState({showPersons: true})
                     }}>Show
+                </button>
+                <button
+                    style={{width: 100, height: 50, margin: 20, color: 'green', backgroundColor: '#f4f0eb'}}
+                    onClick={() => {
+                        this.setState({showPersons: false})
+                    }}>Hide
                 </button>
                 <button
                     style={{width: 100, height: 50, margin: 20, color: 'red', backgroundColor: '#f4f0eb'}}
