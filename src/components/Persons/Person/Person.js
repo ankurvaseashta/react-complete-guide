@@ -45,7 +45,7 @@ class Person extends Component {
                     type="text"
                     onChange={this.props.changed}
                     value={this.props.name}
-                    style={{textAlign: 'center', border: '1px black solid'}}/>
+                    style={{textAlign: 'center', border: '1px black solid', fontWeight: '600'}}/>
             </Auxi>
         )
         ///   return [
