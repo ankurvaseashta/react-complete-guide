@@ -31,21 +31,24 @@ class Person extends Component {
     render() {
         console.log('[Person.js] Inside render()');
         return (
-            <Auxi>
-                <AuthContext.Consumer>
-                    {auth => auth ?
-                        <p style={{color: 'blue', textAlign: 'right', cursor: 'text'}}><b>Authenticated!</b></p> :
-                        <p style={{color: 'red', textAlign: 'right', cursor: 'text'}}> Not authenticated! </p>}
-                </AuthContext.Consumer>
-                <p onClick={this.props.click}>I'm {this.props.name}, a {this.props.type} and {this.props.age} years
-                    old! </p>
-                <p> {this.props.children} </p>
-                <input
-                    ref={this.inputElement}
-                    type="text"
-                    onChange={this.props.changed}
-                    value={this.props.name}
-                    style={{textAlign: 'center', border: '1px black solid', fontWeight: '600'}}/>
+            <Auxi style={{display: 'flex'}}>
+                <div style={{margin: 'auto'}}>
+                    <AuthContext.Consumer>
+                        {auth => auth ?
+                            <p style={{color: 'blue', textAlign: 'right', cursor: 'text'}}><b>Authenticated!</b></p> :
+                            <p style={{color: 'red', textAlign: 'right', cursor: 'text'}}> Not authenticated! </p>}
+
+                    </AuthContext.Consumer>
+                    <p onClick={this.props.click}>I'm {this.props.name}, a {this.props.type} and {this.props.age} years
+                        old! </p>
+                    <p> {this.props.children} </p>
+                    <input
+                        ref={this.inputElement}
+                        type="text"
+                        onChange={this.props.changed}
+                        value={this.props.name}
+                        style={{textAlign: 'center', border: '1px black solid', fontWeight: '600'}}/>
+                </div>
             </Auxi>
         )
         ///   return [
