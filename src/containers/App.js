@@ -116,6 +116,10 @@ class App extends PureComponent {
         this.setState({authenticated: true});
     };
 
+    logoutHandler = () => {
+        this.setState({authenticated: false});
+    };
+
     render() {
         console.log('[App.js] Inside render()');
         let persons = null;
@@ -152,6 +156,7 @@ class App extends PureComponent {
                     showPersons={this.state.showPersons}
                     persons={this.state.persons}
                     login={this.loginHandler}
+                    logout={this.logoutHandler}
                     clicked={this.togglePersonsHandler}/>
                 <AuthContext.Provider value={this.state.authenticated}>
                     {persons}

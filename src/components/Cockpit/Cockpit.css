@@ -25,6 +25,16 @@
 	cursor: pointer;
 }
 
+.logoutButton {
+	border: 1px solid black;
+	padding: 16px;
+	margin: 10px 5px 0 10px;
+	background-color: gray;
+	font: inherit;
+	color: white;
+	cursor: pointer;
+}
+
 .loginButton:hover {
 	background-color: lightblue;
 	color: black;

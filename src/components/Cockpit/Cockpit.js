@@ -8,6 +8,7 @@ const cockpit = (props) => {
     const assignedClasses = [];
     let btnClass = classes.Button;
     let btnLogin= classes.loginButton;
+    let btnLogout= classes.logoutButton;
 
  	if(props.showPersons){
 	  btnClass = [classes.Button, classes.Red].join(' ');
@@ -37,6 +38,9 @@ const cockpit = (props) => {
             <button
                 className={btnLogin}
                 onClick={props.login}>Login</button>
+            <button
+                className={btnLogout}
+                onClick={props.logout}>Logout</button>
         </Auxi>
 	);
 };
