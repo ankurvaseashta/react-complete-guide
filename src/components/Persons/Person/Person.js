@@ -32,7 +32,7 @@ class Person extends Component {
         console.log('[Person.js] Inside render()');
         return (
             <Auxi style={{display: 'flex'}}>
-                <div style={{margin: 'auto'}}>
+                <div style={{margin: 'auto 5px'}}>
                     <AuthContext.Consumer>
                         {auth => auth ?
                             <p style={{color: 'blue', textAlign: 'right', cursor: 'text'}}><b>Authenticated</b></p> :
