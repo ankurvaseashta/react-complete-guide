@@ -36,7 +36,7 @@ class Person extends Component {
                     <AuthContext.Consumer>
                         {auth => auth ?
                             <p style={{color: 'blue', textAlign: 'right', cursor: 'text'}}><b>Authenticated</b></p> :
-                            <p style={{color: 'red', textAlign: 'right', cursor: 'text'}}><i>Not authenticated!</i></p>}
+                            <p style={{color: 'red', textAlign: 'left', cursor: 'text'}}><i>Not authenticated!</i></p>}
                     </AuthContext.Consumer>
                     <p onClick={this.props.click}>I'm {this.props.name}, a {this.props.type} and {this.props.age} years
                         old! </p>
