@@ -32,18 +32,20 @@ const cockpit = (props) => {
         <Auxi>
             <h1> {props.appTitle} </h1>
             <p className={assignedClasses.join(' ')}> People in list! </p>
-            <button
-                className={btnClass}
-                onClick={props.clicked}>Toggle Persons
-            </button>
-            <button
-                className={btnLogin}
-                onClick={props.login}>Login
-            </button>
-            <button
-                className={btnLogout}
-                onClick={props.logout}>Logout
-            </button>
+            <container style={{display: 'flex'}}>
+                <button
+                        className={btnLogin}
+                        onClick={props.login}>Login
+                </button>
+                <button
+                    className={btnClass}
+                    onClick={props.clicked}>Toggle Persons
+                </button>
+                <button
+                    className={btnLogout}
+                    onClick={props.logout}>Logout
+                </button>
+            </container>
         </Auxi>
     );
 };

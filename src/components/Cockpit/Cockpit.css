@@ -18,18 +18,8 @@
 .loginButton {
 	border: 1px solid black;
 	padding: 16px;
-	margin: 10px 5px 0 10px;
+	margin: auto;
 	background-color: blue;
-	font: inherit;
-	color: white;
-	cursor: pointer;
-}
-
-.logoutButton {
-	border: 1px solid black;
-	padding: 16px;
-	margin: 10px 5px 0 10px;
-	background-color: gray;
 	font: inherit;
 	color: white;
 	cursor: pointer;
@@ -44,6 +34,28 @@
 	background-color: salmon;
 	color: black;
 }
+
+.logoutButton {
+	border: 1px solid black;
+	padding: 16px;
+	margin: auto;
+	background-color: gray;
+	font: inherit;
+	color: white;
+	cursor: pointer;
+}
+
+.logoutButton:hover {
+	background-color: lightblue;
+	color: black;
+}
+
+.logoutButton.Red:hover {
+	background-color: salmon;
+	color: black;
+}
+
+
 
 .Button {
 	border: 1px solid black;
