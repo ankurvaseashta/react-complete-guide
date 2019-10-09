@@ -12,7 +12,6 @@
 	max-height: 200px;
 }
 
-
 @media (min-width: 500px){
 	.Person{
 		max-width: 700px;
