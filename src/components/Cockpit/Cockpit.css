@@ -17,6 +17,7 @@
 
 .loginButton {
 	border: 1px solid black;
+	border-radius: 15px;
 	padding: 16px;
 	margin: auto;
 	background-color: blue;
@@ -37,6 +38,7 @@
 
 .logoutButton {
 	border: 1px solid black;
+	border-radius: 15px;
 	padding: 16px;
 	margin: auto;
 	background-color: gray;
@@ -46,7 +48,7 @@
 }
 
 .logoutButton:hover {
-	background-color: lightblue;
+	background-color: lightgrey;
 	color: black;
 }
 

@@ -32,7 +32,7 @@ const cockpit = (props) => {
         <Auxi>
             <h1> {props.appTitle} </h1>
             <p className={assignedClasses.join(' ')}> People in list! </p>
-            <container style={{display: 'flex'}}>
+            <div style={{display: 'flex'}}>
                 <button
                         className={btnLogin}
                         onClick={props.login}>Login
@@ -45,7 +45,7 @@ const cockpit = (props) => {
                     className={btnLogout}
                     onClick={props.logout}>Logout
                 </button>
-            </container>
+            </div>
         </Auxi>
     );
 };
