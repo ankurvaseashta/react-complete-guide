@@ -20,7 +20,7 @@
 }
 
 .loginButton {
-	border: 2px solid black;
+	border: 2px solid blue;
 	border-radius: 15px;
 	padding: 16px;
 	margin: auto;
@@ -36,7 +36,7 @@
 }
 
 .logoutButton {
-	border: 2px solid black;
+	border: 2px solid gray;
 	border-radius: 15px;
 	padding: 16px;
 	margin: auto;
