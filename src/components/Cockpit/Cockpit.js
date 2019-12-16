@@ -35,8 +35,8 @@ const cockpit = (props) => {
             <p className={assignedClasses.join(' ')}> People in list! </p>
             <div className={btnContainer}>
                 <button
-                        className={btnLogin}
-                        onClick={props.login}>Login
+                    className={btnLogin}
+                    onClick={props.login}>Login
                 </button>
                 <button
                     className={btnClass}
