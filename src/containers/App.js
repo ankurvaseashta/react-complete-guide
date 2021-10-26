@@ -15,7 +15,7 @@ class App extends PureComponent {
         this.state = {
             persons: [
                 {id: 'abcd', name: 'Ankur', age: 10, type: 'Human'},
-                {id: 'abce', name: 'Usha', age: 9, type: 'Human'},
+                {id: 'abce', name: 'Joe', age: 9, type: 'Human'},
                 {id: 'abcf', name: 'Buddy', age: 5, type: 'Dog'},
                 {id: 'abcg', name: 'Valentina', age: 5, type: 'Cat'},
                 {id: 'abch', name: 'Silly', age: 7, type: 'Dog'},
